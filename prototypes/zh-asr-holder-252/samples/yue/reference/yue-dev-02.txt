@@ -1,0 +1,1 @@
+开一个叫 parseConfig 嘅 function，新段落 佢收两个参数，一个系路径，一个系 encoding。

@@ -1,0 +1,1 @@
+今朝我行咗成套测试，所有 unit test 都过咗，不过 integration test 有两个 fail。下昼我开始查呢两个问题嘅原因，而家知道咗系 timeout 设置错咗。改完之后再行一次，今次全部通过。
