@@ -1,8 +1,14 @@
 ---
-status: accepted
+status: accepted, partially superseded
 ---
 
 # No one-model dictation engine
+
+> **Partially superseded** by [ADR-0004](0004-mandarin-cantonese-dictation.md),
+> which reopens language scope on its own: English remains the default profile, but
+> the product now also targets spoken Mandarin/Cantonese → written Simplified Chinese.
+> What this ADR actually decides — the two-stage dictation shape and the rejection of
+> a one-model engine — is untouched.
 
 The [#176](https://github.com/Nabzx/openstream/issues/176) map asked whether a single
 local speech model could be OpenStream's whole ordinary-dictation engine — one model
