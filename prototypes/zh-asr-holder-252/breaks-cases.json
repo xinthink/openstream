@@ -1,0 +1,133 @@
+{
+  "note": "Spike-only zh break-placement eval set for ADR-0004 gate #3. Sentences are pre-split (the splitter is not the variable under test). `expected` is the spike author's own read of where a new paragraph should start - the same author-read convention as spike/list-boundaries-125/reference.py. Sentence 1 is never a valid break.",
+  "cases": [
+    {
+      "id": "zh-4-topicshift",
+      "bucket": "short",
+      "sentences": [
+        "我们昨天讨论了新版本的上线时间。",
+        "大家都同意先做一轮小范围灰度。",
+        "另外服务器成本的问题也需要重新评估。",
+        "我建议下次会议专门讨论预算。"
+      ],
+      "expected": [3]
+    },
+    {
+      "id": "zh-3-onetopic",
+      "bucket": "short",
+      "sentences": [
+        "这个函数的输入是一个字符串。",
+        "它会把里面的空格都去掉。",
+        "然后返回处理之后的结果。"
+      ],
+      "expected": []
+    },
+    {
+      "id": "zh-4-earlybreak",
+      "bucket": "short",
+      "sentences": [
+        "我先说明一下今天的安排。",
+        "上午我们集中处理线上告警。",
+        "下午再回到新功能的开发。",
+        "晚上如果有时间就补一下文档。"
+      ],
+      "expected": [2]
+    },
+    {
+      "id": "zh-5-debug",
+      "bucket": "sentence",
+      "sentences": [
+        "今天上午我跑了完整的测试套件。",
+        "所有的单元测试都通过了。",
+        "但是集成测试有两个失败。",
+        "下午我开始排查这两个失败的原因。",
+        "目前定位到是超时配置的问题。"
+      ],
+      "expected": [4]
+    },
+    {
+      "id": "zh-6-two-shifts",
+      "bucket": "sentence",
+      "sentences": [
+        "这次重构的主要目标是拆开那个巨大的模块。",
+        "我们把网络请求的部分单独抽了出来。",
+        "这样单元测试就不再依赖真实的服务器。",
+        "接下来要说的是发布流程的变化。",
+        "现在每次合并都会自动构建一个预览版本。",
+        "发布分支只接受已经验证过的提交。"
+      ],
+      "expected": [4]
+    },
+    {
+      "id": "zh-6-onetopic-none",
+      "bucket": "sentence",
+      "sentences": [
+        "这个缓存层的实现其实很简单。",
+        "它用一个哈希表记录最近访问过的键。",
+        "每次读取的时候会先查这个表。",
+        "如果命中就直接返回结果。",
+        "没命中才去查数据库。",
+        "然后顺手把结果写回表里。"
+      ],
+      "expected": []
+    },
+    {
+      "id": "zh-6-decoy-enumeration",
+      "bucket": "sentence",
+      "sentences": [
+        "开始之前需要准备三样东西。",
+        "一个可以联网的测试环境。",
+        "一份最新的配置文件。",
+        "还有就是数据库的只读账号。",
+        "这些准备好以后就可以开始了。"
+      ],
+      "expected": []
+    },
+    {
+      "id": "zh-8-dev",
+      "bucket": "paragraph",
+      "sentences": [
+        "关于这个接口的分页参数我们讨论了很久。",
+        "最后决定用游标而不是偏移量。",
+        "这样在数据量很大的时候性能更稳定。",
+        "下面说说监控方面的事情。",
+        "我们给每个关键路径都加了延迟直方图。",
+        "一旦超过阈值就会触发告警。",
+        "告警会发到值班群里。",
+        "值班的同学需要在半小时内响应。"
+      ],
+      "expected": [4]
+    },
+    {
+      "id": "zh-10-long",
+      "bucket": "paragraph",
+      "sentences": [
+        "上周我们完成了一次比较大的依赖升级。",
+        "主要是把运行时从旧版本换到了新版本。",
+        "升级过程中遇到了几个兼容性问题。",
+        "其中一个花了两天才定位到。",
+        "接下来是团队协作方面的调整。",
+        "我们把代码评审的规则改得更明确了。",
+        "每个改动至少需要一位同事看完。",
+        "紧急修复可以先合并再补评审。",
+        "最后说一下下个季度的目标。",
+        "我们希望能把启动时间再压缩一半。"
+      ],
+      "expected": [5, 9]
+    },
+    {
+      "id": "zh-7-three-topics",
+      "bucket": "paragraph",
+      "sentences": [
+        "先回顾一下这个月的线上稳定性。",
+        "整体的可用率比上个月好了一些。",
+        "主要原因是那次缓存击穿被及时修掉了。",
+        "然后说一下成本。",
+        "这个月的账单比预算高出了两成。",
+        "主要是日志存储的费用涨得比较快。",
+        "所以下个月我们要先做日志采样。"
+      ],
+      "expected": [4]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+== cold: first invocation pays the ~471 MB download, so load_ms includes it ==
+{"wav":"smoke\/cmn-short.wav","infer_ms":164,"text":"你好这是一段普通话的测试","lang":"auto","load_ms":720925,"event":"result"}
+== warm: model cached - one line per clip ==
+{"text":"你好这是一段普通话的测试","event":"result","lang":"auto","infer_ms":131,"load_ms":531,"wav":"smoke\/cmn-short.wav"}
+{"load_ms":513,"event":"result","infer_ms":143,"text":"我们在做一个本地优先的语音听写工具所有音频都不会离开这台电脑","wav":"smoke\/cmn-sent.wav","lang":"auto"}
+{"text":"你好呢个系粤语嘅测试我想试下专写","lang":"auto","event":"result","wav":"smoke\/yue-sent.wav","load_ms":513,"infer_ms":157}
+{"infer_ms":146,"event":"result","wav":"smoke\/yue-sent.wav","lang":"yue","text":"你好呢个系粤语嘅测试我想试下转写","load_ms":524}
+{"load_ms":465,"text":"butget user name 改成蛇形命名逗号然后继续","event":"result","wav":"smoke\/cmn-dev.wav","lang":"auto","infer_ms":147}
+{"wav":"smoke\/cmn-dev.wav","lang":"cmn","text":"butget user name 改成蛇形命名逗号然后继续","load_ms":547,"event":"result","infer_ms":145}
+{"infer_ms":280,"load_ms":658,"wav":"smoke\/cmn-para.wav","event":"result","lang":"auto","text":"我们在做一个本地优先的语音听写工具所有音频都不会离开这台电脑也不会有任何账号或者订阅目标是让写代码的人按住一个键说话松手以后文字就落在光标的位置今天测试一个比较长的段落看看延迟是不是仍然在预算之内同时确认输出里有没有标点符号"}
+{"lang":"auto","event":"result","wav":"smoke\/yue-para.wav","text":"你好呢个系一个粤语嘅段落测试我想试下比较长嘅句子睇下转写会唔会准确同埋延迟会唔会超出预算所有音频都唔会离开呢部电脑亦都唔需要任何账号","infer_ms":247,"load_ms":533}
+{"event":"rss","candidate":"A0-sensevoice","resident_mb":41}
+== ITN probes (cmn, auto) ==
+{"wav":"smoke\/itn-money.wav","load_ms":693,"infer_ms":164,"text":"这个项目花了一千零二十三块钱占比百分之五十","event":"result","lang":"auto"}
+{"text":"圆周率大约是三点一四","lang":"auto","wav":"smoke\/itn-decimal.wav","load_ms":536,"event":"result","infer_ms":141}
+{"load_ms":543,"event":"result","wav":"smoke\/itn-date.wav","lang":"auto","infer_ms":145,"text":"会议定在二零二五年三月九号"}
+== yue colloquial probes (auto then forced yue) ==
+{"infer_ms":132,"text":"我唔知道佢去咗边度","wav":"smoke\/yue-col-1.wav","event":"result","lang":"auto","load_ms":543}
+{"infer_ms":121,"load_ms":574,"lang":"yue","text":"我唔知道佢去咗边度","wav":"smoke\/yue-col-1.wav","event":"result"}
+{"lang":"auto","wav":"smoke\/yue-col-2.wav","text":"呢本书系我嘅佢睇咗好开心","event":"result","infer_ms":140,"load_ms":572}
+{"wav":"smoke\/yue-col-2.wav","lang":"yue","event":"result","infer_ms":146,"text":"呢本书系我嘅佢睇咗好开心","load_ms":526}
+{"infer_ms":150,"event":"result","lang":"auto","wav":"smoke\/yue-col-3.wav","load_ms":608,"text":"今日冇雨我哋去街市买"}
+{"infer_ms":143,"wav":"smoke\/yue-col-3.wav","text":"今日冇雨我哋去街市买","event":"result","load_ms":565,"lang":"yue"}

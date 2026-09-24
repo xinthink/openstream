@@ -1,0 +1,163 @@
+{
+  "model": "SmolLM2-1.7B-Instruct-Q4_K_M",
+  "repsPerCase": 5,
+  "cases": 10,
+  "formatValidRate": 1,
+  "sentenceOneRate": 0,
+  "exactRate": 0,
+  "repairedRate": 0,
+  "latencyMs": {
+    "median": 200,
+    "min": 94,
+    "max": 795,
+    "overProductTimeout300": 8,
+    "samples": 48
+  },
+  "perCase": [
+    {
+      "id": "zh-4-topicshift",
+      "bucket": "short",
+      "sentences": 4,
+      "expected": [
+        3
+      ],
+      "answers": [
+        "[2,3,4]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 147
+    },
+    {
+      "id": "zh-3-onetopic",
+      "bucket": "short",
+      "sentences": 3,
+      "expected": [],
+      "answers": [
+        "[2,3]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 121
+    },
+    {
+      "id": "zh-4-earlybreak",
+      "bucket": "short",
+      "sentences": 4,
+      "expected": [
+        2
+      ],
+      "answers": [
+        "[2,4]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 118
+    },
+    {
+      "id": "zh-5-debug",
+      "bucket": "sentence",
+      "sentences": 5,
+      "expected": [
+        4
+      ],
+      "answers": [
+        "[2,4,5]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 145
+    },
+    {
+      "id": "zh-6-two-shifts",
+      "bucket": "sentence",
+      "sentences": 6,
+      "expected": [
+        4
+      ],
+      "answers": [
+        "[2,4,5,6]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 202
+    },
+    {
+      "id": "zh-6-onetopic-none",
+      "bucket": "sentence",
+      "sentences": 6,
+      "expected": [],
+      "answers": [
+        "[2,4,5,6]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 203
+    },
+    {
+      "id": "zh-6-decoy-enumeration",
+      "bucket": "sentence",
+      "sentences": 5,
+      "expected": [],
+      "answers": [
+        "[2,4,5]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 156
+    },
+    {
+      "id": "zh-8-dev",
+      "bucket": "paragraph",
+      "sentences": 8,
+      "expected": [
+        4
+      ],
+      "answers": [
+        "[2,4,5,6,7]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 265
+    },
+    {
+      "id": "zh-10-long",
+      "bucket": "paragraph",
+      "sentences": 10,
+      "expected": [
+        5,
+        9
+      ],
+      "answers": [
+        "[2,4,6,7,9]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 250
+    },
+    {
+      "id": "zh-7-three-topics",
+      "bucket": "paragraph",
+      "sentences": 7,
+      "expected": [
+        4
+      ],
+      "answers": [
+        "[2,4,5,6]"
+      ],
+      "exact": 0,
+      "formatValid": 5,
+      "sentenceOne": 0,
+      "medianMs": 215
+    }
+  ]
+}
